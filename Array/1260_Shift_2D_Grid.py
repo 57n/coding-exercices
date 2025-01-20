@@ -35,7 +35,7 @@ class Solution2:
         elements = [grid[i][j] for i in range(m) for j in range(n)]
         # 移動k次
         k = k % size
-        # ex. k = 2, [1,2,3,4,5] -> [4, 5, 1, 2, 3]
+        # ex. k = 2, [1, 2, 3, 4, 5] -> [4, 5, 1, 2, 3]
         elements = elements[-k:] + elements[:size - k]
         # 轉回二維
         return [[elements[i*n + j] for j in range(n)] for i in range(m)]
